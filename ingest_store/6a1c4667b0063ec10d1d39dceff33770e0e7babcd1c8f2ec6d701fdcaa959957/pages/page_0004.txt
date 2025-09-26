@@ -1,0 +1,57 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+ 
+ (2023) 012063
+doi:10.1088/1742-6596/2580/1/012063
+2.  Theoretical Analysis of Microstrip Patch Antenna
+Figure 1. Proposed Microstrip Patch Antenna
+Figure 1 depicts the proposed 5G microstrip patch antenna operating at 28 GHz. After choosing 28 GHz 
+as the operating frequency, materials used for the antenna should be considered first. Three layers make 
+up the antenna. The ground is the bottom layer, the substrate is the middle layer, and the patch antenna 
+is the top layer. Typically, copper foil is used to make the metallic patch. The substrate material maintains 
+the necessary distance between its ground plane and the patch and supports the radiating patch. The 
+most important criterion for determining the substrate in commercial applications is cost. By using the 
+dielectric honeycomb of a foam board as the substrate for array primitives operating at low microwave 
+frequencies(lower than 15 GHz), it is possible to reduce material costs, losses, and antenna quality while 
+increasing bandwidth. We use copper as the ground and patch antenna, and Rogers RT5880(lossy) as 
+the substrate for this antenna.
+The parameters are summarized in Table 1 below for the antenna geometry.
+Table 1. Dimensions of proposed antenna
+Parameter 
+Value(mm) 
+Lgnd 
+15 
+Wlng 
+8 
+Lpat 
+3.494 
+Wpat 
+5.3 
+Wmic 
+0.1 
+Lslot 
+0.15 
+h 
+0.032 
+th 
+0.003
+TM10 mode is used in the proposed antenna. This is due to the different cross-polarization brought by 
+different modes. For the TM m0 mode, the smaller the m, the larger the contribution to the cross-
+polarization, so the TM10 mode contributes the most to the cross-polarization field. The ratio of cross-
+polarization to co-polarization in a particular direction is equal to |𝐸10(𝜃, 𝜑)|/|𝐸01(𝜃, 𝜑)|. Likewise, if 
+the patch is activated at the TM10 mode’s resonance frequency, it is roughly represented by 
+|𝐸01(𝜃, 𝜑)|/|𝐸10(𝜃, 𝜑)|. Equations (1-2) display the analytical computations for the patch’s geometry 
+parameters.
+2
+2
+𝑚𝜋
+𝑊𝑝𝑎𝑡)
+𝑛𝜋
+𝐿𝑝𝑎𝑡)
+𝑘𝑚𝑛
+2
+= (
+(1)
++ (
+where 𝑘𝑚𝑛 is the phase-shift constant of the electromagnetic wave, 𝑊𝑝𝑎𝑡 is the patch width, 𝐿𝑝𝑎𝑡 is 
+the patch length, 𝑚 and 𝑛 represent which mode the electromagnetic wave is working.

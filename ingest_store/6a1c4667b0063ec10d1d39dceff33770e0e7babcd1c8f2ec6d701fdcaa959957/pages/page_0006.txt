@@ -1,0 +1,39 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+From equations (7-8), it can be derived that the maximum value can be obtained when R equals r. As 
+the photoconduction property of water and light is different, the light will be reflected when the light 
+hits water from the air. Similarly, if the reference impedance changes significantly during the 
+transmission of the signal, it will also be reflected. Low-frequency signals have wavelengths 
+significantly greater than the transmission line’s length since the relationship between wavelength and 
+frequency is inverse, making it unnecessary to consider signal reflection in this situation. However, 
+when it comes to high frequency, when the signal’s wavelength and the transmission line length are 
+almost in the same order, the reflected signal will commonly be an alias with the original signal, 
+influencing the signal quality. By implementing an impedance match, the reflection of the high-
+frequency signal can be effectively decreased. Generally, there are two ways to make an impedance 
+match, lumped-circuit matching and adjusting the transmission line. Lumped-circuit matching is 
+achieved via different serial or parallel connections of capacitors, inductors, and load to make the input 
+impedance match reference impedance. Here we use another way, as shown in Figure 2 , adjusting the 
+transmission line to match the reference impedance.
+Figure 2. The schematic diagram of inset feeding
+As using edge feed always brings large input impedance, altering the feeding position to the antenna’s 
+center can be better for the current at both ends is generally low but relatively higher towards the center. 
+This way, we can effectively decrease the input impedance and make it easier to match impedance.
+3.  Results and discussions 
+With the use of Computer Simulation Technology Microwave Studio, the antenna was modeled and 
+simulated. From Figure 3 (a), the Input side and signal passed through to the output side of the DUT can 
+be measured by VNA. The VNA receiver detects the generated signal and compares the known signal 
+with it. In this way, there’re 4 coefficients obtained from VNA. The reflection coefficient represents the 
+input reflection coefficient, as shown in equation (9). The reflection coefficient is the signal applied to 
+Port 1 with Port 2 terminated in 50Ω. It represents the amount of power that is reflected instead of 
+radiating to outer space. For an antenna, the smaller its reflection coefficient, the better performance it 
+will get. For the reflection coefficient, -10 dB is the threshold of acceptance. Figure 3 (b) shows that the 
+antenna has the smallest reflection coefficient of -24 dB at 28 GHz. The entire curve declines rapidly at 
+about 27.6 GHz and reaches its peak at 28 GHz, then increases fast with the frequency rise. Generally, 
+the frequency band corresponding to half of the reflection coefficient’s peak can be considered the 
+antenna’s bandwidth. The tags within the reflection coefficient’s figure show that the bandwidth’s upper 
+limit is 27.864 GHz, and the lower limit of the bandwidth is 28.14 GHz, giving us a bandwidth of 280 
+MHz. In order to get a better reflection coefficient, we have to make the antenna’s input impedance
+5

@@ -1,0 +1,51 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+Table 2 Spacial Parameter of Antenna array
+X-axis 
+Y-axis 
+Z-axis 
+Elements in x, y, z 
+2 
+2 
+2 
+Space shift in x, y, z 
+6 
+1 
+2
+Within mobile communication, co-channel interference is a great influence on the channel. To solve this, 
+sectorization can be performed. In the case of a sectorized cell, each cell is divided into either 3 or 6 
+equal parts or sectors. It means using 3 or 6 directional antennas at the base station instead of a single 
+omnidirectional antenna to reduce the number of co-channel interferences. In the proposed antenna, we 
+sectorize the cell into 3 parts, which means the antenna’s radiation angle should be 120°. By 
+implementing beam-shaping, we make several antennas into an entire antenna array, which gives the 
+radiation pattern in Figure 8 (a). The radiation pattern’s main lobe magnitude is 3.12 dBi, far beyond a 
+mobile communication antenna requirement. The angular width is 123°, which we propose in this 
+antenna. This radiation pattern shows that most of the energy is focused within the main lobe, and power 
+within all other lobes is suppressed, which is only -13.6 dBi. Figure 8 (b) shows how the power is 
+radiated in the 3D dimension.
+Figure 8. (a)2D radiation pattern. (b)3D radiation pattern
+4.  Conclusion 
+This paper proposes a rectangular microstrip patch antenna for 5G mobile wireless communication at 
+28 GHz. The antenna resonates at 28 GHz with a reflection coefficient of -24 dB. The antenna’s 
+bandwidth is 280 MHz, with a lower operating frequency of 27.864GHz and an upper operating 
+frequency of 28.14 GHz. The proposed antenna shows a VSWR of 1.24, a gain of 2.2 dBi. The antenna’s 
+input impedance at the operating frequency band is 51.6 Ω, which shows good matching with the 
+reference impedance 50 Ω. By implementing beam-shaping, several antennas are put into an antenna 
+array. This way, the antenna can be used in 3-sectorization as a directional antenna whose radiation angle 
+is 120°. In total, the antenna’s reflection coefficient and gain at the operating frequency band can meet 
+the design purpose requirement, which makes the antenna have great performance at its operating 
+frequency.
+A microstrip patch antenna is now widely used in today’s 5G technology. Meanwhile, 5G is less of 
+a single technology, like 3G or 4G, but more of a pathway, which can enable many new technologies 
+like IoT. Therefore, the microstrip patch antenna has a wide range of applications. Applications for 
+microstrip patch antennas are numerous and not just limited to 5G communications. Specific patch 
+radiators with a light weight and low profile are appropriate for use in treating malignancies in humans. 
+Microstrip patch antennas are produced in large quantities using photolithography.
+References 
+[1] 
+Hohn Colaco and Rajesh B. Lohani 2022 Performance analysis of microstrip patch antenna using
+a four-layered substrate of different materials
+9

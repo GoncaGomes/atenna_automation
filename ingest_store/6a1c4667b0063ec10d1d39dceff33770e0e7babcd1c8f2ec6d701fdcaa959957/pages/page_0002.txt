@@ -1,0 +1,45 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+A microstrip patch antenna for 5G mobile communications
+Yitong Li1
+1Department of Electronic and Computer Engineering, The Hong Kong University of 
+Science and Technology, Hong Kong, 999077, China
+Caster.li@connect.ust.hk
+Abstract. The advantages of microstrip patch antennas include small size, adaptable surface, 
+ease of fabrication, and compatibility with integrated circuit technology. Numerous experiments 
+have been done over the past few decades to enhance the performance of this antenna, and both 
+military and commercial sectors have found many uses for it. This paper introduces a microstrip 
+patch antenna with an operating frequency of 28GHz for 5G mobile communication. This 
+research designed and simulated a rectangular microstrip patch antenna with 3.494 mm * 5.3 
+mm * 0.003 mm. The proposed antenna resonates at 28 GHz with a reflection coefficient of -24 
+dB, a bandwidth of 280 MHz, and a gain of 2.2 dBi. The inset feed technique matches the 50 Ω 
+transmission line impedance. In the design, Rogers RT5880 substrate and copper ground are 
+used. The antenna’s geometry was calculated, and simulated results were analyzed using 
+Computer Simulation Technology Microwave Studio. In conclusion, the proposed antenna has 
+a reflection coefficient of -24 dB, VSWR of 1.24, an input impedance of 51.6Ω, and a gain of 
+2.2 dBi at operating frequency with a compact geometry can be used in 5G mobile 
+communications. The future shift in resonance frequencies and beams can be considered to make 
+the antenna operate as a smart antenna.
+Keywords: Index Terms - Millimeter wave, Microstrip patch antenna, 5G, 28GHz
+1.  Introduction 
+Microstrip patch antenna has been developed for several years and put into engineering applications for 
+a long time. During this period, many great improvements were made to the antenna. For example, a 
+solution to the rectangular microstrip antenna problem was proposed in 1987 by extending the patch and 
+feedline currents into a suitable set of patterns and formulating a solution in the spectral domain [1]. 
+This helps to achieve close results for the radiative edge feeding and coupling case [2]. Later in 1991, 
+an experimental investigation on a microstrip patch antenna with coplanar feed lines was proposed. The 
+ground plane’s slot is used to couple the coplanar line to the patch and inductively or capacitively 
+connects the slot to the coplanar line. Adjusting the slot length can be used to change the input return 
+loss, and additional frequency tuning can be achieved by switching the inductive and capacitive 
+coupling[3]. Recently, after 2010, some progress has been made in the research of microstrip patch 
+antennas, making them smaller in profile, smaller in size, lower in cost, lighter in weight, and easier to 
+manufacture.
+Meanwhile, an array configuration can overcome the microstrip patch antenna’s disadvantages, 
+including lower gain and power handling capacity [4]. Also, by 2012, three feeding methods were
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution
+of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.
+Published under licence by IOP Publishing Ltd
+1

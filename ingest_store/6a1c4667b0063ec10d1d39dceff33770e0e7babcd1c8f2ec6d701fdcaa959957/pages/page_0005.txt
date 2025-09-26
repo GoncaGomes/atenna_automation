@@ -1,0 +1,66 @@
+CONF-SPML-2023
+ 
+2580
+IOP Publishing
+𝑘𝑚𝑛𝑐
+2𝜋√𝜀𝑟 
+(2)
+𝑓𝑚𝑛=
+where 𝑓𝑚𝑛 is the antenna’s operating frequency on TMmn mode, 𝜀𝑟 is the relative dielectric constant, 
+𝑐 is the speed of light in free space. From equation (1-2), we can derive equation (3), which gives us the 
+patch width on TM10 mode.
+𝑐
+2𝑊𝑝𝑎𝑡√𝜀𝑟 
+(3)
+𝑓𝑚𝑛=
+𝑊𝑝𝑎𝑡: 𝐿𝑝𝑎𝑡 affects the cross-polarization level. When 𝑊𝑝𝑎𝑡: 𝐿𝑝𝑎𝑡= 1.5: 1, or roughly 21 dB below the 
+co-polarized field, the cross-polarization is the least when applied to a patch feed at the edge. More 
+extensive tests demonstrate that the cross-polarized to co-polarized ratios vary on substrate 
+thickness, resonance frequencies and feed position. From equation (4), we can calculate the width and 
+length of the patch.
+𝑊𝑝𝑎𝑡: 𝐿𝑝𝑎𝑡= 1.5:1 
+(4)
+where 𝑊𝑝𝑎𝑡 is the patch width, 𝐿𝑝𝑎𝑡 is the patch length.
+Equation (5) can be used to determine the effective permittivity and height of the substrate 
+given operating frequency, relative dielectric constant, width, and patch length.
+−1
+(𝜀𝑟+1)
+(𝜀𝑟−1)
+10ℎ
+𝐿𝑝𝑎𝑡]
+2 
+(5)
+𝜀𝑒𝑓𝑓=
+2
+[1 +
+2
+Where 𝜀𝑟 is the relative dielectric constant, 𝐿𝑝𝑎𝑡 is the length of patch, ℎ is height of the substrate.
+𝑐
+𝑊𝑝𝑎𝑡(𝑊𝑝𝑎𝑡+ℎ)√𝜀𝑒𝑓𝑓 
+(6)
+𝑓𝑟=
+where 𝑊𝑝𝑎𝑡 is width of the patch, 𝑓𝑟 is operating frequency of the antenna.
+What should be considered is how to feed the antenna. Generally, there are three ways to feed the 
+antenna, microstrip line feed, coaxial cable feed, and electromagnetic coupling feed. Here we use 
+microstrip line feeding as the feeding method. For the patch antenna and microstrip line, we want both 
+of them to be coplanar, so that photo etching can be easily done for them. Meanwhile, as the feeding 
+line also radiates power towards the outside, interfering with the antenna’s radiation pattern, the 
+microstrip line’s width is limited. The microstrip line’s limitation is that the microstrip line’s width must 
+be much less than the wavelength. More specifically, six methods are commonly used in microstrip 
+patch antenna, edge feed, inset feed, quarter-wave transformer, coaxial cable feed, electromagnetic feed, 
+and diameter feed. Here we use inset feed as it will be easy to do impedance matching using this feeding 
+method.
+Impedance match is one of the most important parts when designing the antenna. It can influence the 
+load’s power and suppress the signal’s reflection by matching the transmission line’s impedance 
+with load’s impedance. Assuming the power source is determined, the load’s power will be determined 
+by the impedance match between the transmission line and load. The reactance led by the capacitor and 
+inductor can be ignored for idealized pure resistance circuits or low-frequency circuits. The most 
+impedance of the circuit comes from resistance.
+𝑈
+𝑅+𝑟 
+(7)
+𝐼=
+where 𝑅 is load resistance, 𝑟 is resistance of other circuit parts.
+𝑃= 𝐼∗𝐼∗𝑅 
+(8)
+4

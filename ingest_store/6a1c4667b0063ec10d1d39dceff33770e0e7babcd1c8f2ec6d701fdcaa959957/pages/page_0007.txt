@@ -1,0 +1,38 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+match the transmission line’s reference impedance at the operating frequency, which will greatly 
+influence the reflection coefficient.
+Figure 3. Block diagram of S-parameter and S11 on the operating frequency
+𝑏1
+𝑎1 |𝑎2=0 
+(9)
+𝑆11 =
+When the input and output sides are not conjugated matched, the reflected wave will sum up with the 
+output wave and form a standing wave. The amount of reflection can be evaluated by the VSWR. 
+Equation (10) shows that VSWR is positively correlated with the reflection coefficient. Therefore, like 
+the reflection coefficient, the larger the VSWR, the worse the antenna’s performance. The best case 
+happens when the reflection coefficient equals to 0. At this time, VSWR will be the smallest, which is 
+1. For all other cases, VSWR will be larger than 1. More specifically, for the reflection coefficient’s 
+threshold of acceptance in the proposed antenna, its corresponding VSWR is 1.22. For the peak of the 
+reflection coefficient, which is -24 dB, its corresponding VSWR is 1.008. 
+To some extent, VSWR can also be used to represent the power reflected by the antenna, as the reflection 
+coefficient can calculate it. The variation trend of VSWR is shown clearly in Figure 4. In total, the curve 
+is symmetric at around 28 GHz. At 27 GHz, the curve is generally stable at 11. The curve starts to decline 
+when the frequency comes close to 27.1 GHz. From 27.1 GHz to the upper limit of the 
+designed frequency band, 27.864 GHz, VSWR decreases from 11 to 1.8. Within the designed frequency 
+band, VSWR first declines from 1.8 to 1.24, then increases to 1.72. In the whole designed frequency 
+band, VSWR is smaller than 1.8. As the curve reaches its peak at the operating frequency, it shows the 
+antenna works well within the frequency band.
+|𝑉𝑚𝑎𝑥|
+|𝑉𝑚𝑖𝑛| =
+1+𝑆11
+1−𝑆11 
+(10)
+𝑉𝑆𝑊𝑅=
+Figure 4. VSWR of the proposed antenna on operating frequency
+Generally, transmission line’s impedance is 50Ω. Therefore, impedance match requires the antenna’s 
+entire input impedance to reach approximately 50Ω at operating frequency. Figure 5 shows the trend of
+6

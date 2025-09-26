@@ -1,0 +1,35 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+the real part, the imaginary part, and the whole magnitude of the antenna’s input impedance. The real 
+part of impedance, represented by the blue curve, moves around from 27 GHz to 28 GHz and reaches 
+about 33Ω at 28 GHz. The overall trend of impedance’s real part from 27 GHz to 28 GHz is stable, but 
+then it grows over 4 times after 28 GHz and reaches its peak of 182 Ω at 28.6 GHz. The imaginary part 
+of impedance, represented by the orange curve, declines rapidly from 150Ω to 0Ω at the frequency range 
+27 GHz – 28.3 GHz and reaches about 40Ω at 28 GHz. Within the frequency range 27GHz - 28.3 GHz, 
+the imaginary part of impedance decreases almost linearly from 150Ω to 0Ω, then rises rapidly after 
+28.5 GHz and reaches its peak of 154Ω at 28.8 GHz. The entire magnitude of the antenna input 
+impedance, represented by the black curve, moves nearly to its lowest point of 51.6Ω at 28 GHz, then 
+reaches its peak at about 28.6 GHz. As the operating frequency band is from 27.864 to 28.14, the entire 
+magnitude of input impedance ranges from 51Ω to 55Ω, which shows impedance matching is good in 
+the whole frequency band. All three curves seem to decrease at different speeds before 28 GHz, then all 
+peak at about 28.7 GHz. For the entire magnitude of input impedance, its trend appears to be similar to 
+the reflection coefficient, which shows that on the designed frequency band, the antenna’s input 
+impedance is around 50Ω. Impedance matching at such frequency bands guarantees good performance 
+within the operating frequency.
+Figure 5. Real part, imaginary part, magnitude of Z11 on the operating frequency
+The antenna’s gain is another parameter that must be considered when designing. The gain represents 
+the ratio between the antenna’s radiation power density and the reference antenna’s radiation power 
+density. Antenna gain can measure the ability to transmit and receive signals in a specific direction. It 
+also strongly relates to the antenna’s radiation pattern. The antenna will have a higher gain if the main 
+lobe is thinner. Because the requirements of different applications can differ, both gain and radiation 
+patterns must be considered due to various applications. Figure 6 shows the trend of realized gain and 
+reflection coefficient versus frequency. At 27 GHz, the gain is less than -5 dBi. It increases from -5 dBi 
+to 1.5 dBi, with a frequency rising to 27.8 GHz. Within the working frequency, ranging from 27.864 
+GHz to 28.14 GHz, gain first rises from 1.5 dBi to 2.2 dBi, then decreases to 1.78 dBi. Then the gain 
+decreases rapidly as the frequency becomes higher. As the proposed antenna is used for 5G mobile 
+communications, for mobile devices, generally, the requirement for gain is 0 dBi. The antenna’s gain 
+within the operating frequency band can meet the requirement of a mobile antenna.
+7

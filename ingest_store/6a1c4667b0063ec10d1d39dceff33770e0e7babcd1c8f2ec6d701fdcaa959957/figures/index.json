@@ -1,0 +1,146 @@
+[
+  {
+    "figure_id": "fig_001",
+    "page": 1,
+    "bbox": [
+      474.94000244140625,
+      39.0,
+      556.0,
+      57.75
+    ],
+    "caption": "An off-center fed patch antenna with",
+    "caption_preview": "An off-center fed patch antenna with",
+    "image_path": "figures\\fig_001.png",
+    "warnings": [
+      "caption_not_prefixed_by_figure"
+    ]
+  },
+  {
+    "figure_id": "fig_002",
+    "page": 1,
+    "bbox": [
+      37.5,
+      454.2900085449219,
+      557.5,
+      790.7000122070312
+    ],
+    "caption": "This content was downloaded from IP address 193.137.169.166 on 16/09/2025 at 11:13",
+    "caption_preview": "This content was downloaded from IP address 193.137.169.166 on 16/09/2025 at 11:13",
+    "image_path": "figures\\fig_002.png",
+    "warnings": [
+      "caption_not_prefixed_by_figure"
+    ]
+  },
+  {
+    "figure_id": "fig_003",
+    "page": 4,
+    "bbox": [
+      163.0500030517578,
+      138.24998474121094,
+      434.22003173828125,
+      282.54998779296875
+    ],
+    "caption": "Figure 1. Proposed Microstrip Patch Antenna Figure 1 depicts the proposed 5G microstrip patch antenna operating at 28 GHz. After choosing 28 GHz",
+    "caption_preview": "Figure 1. Proposed Microstrip Patch Antenna Figure 1 depicts the proposed 5G microstrip patch antenna operating at 28 GHz. After choosing 28â€¦",
+    "image_path": "figures\\fig_003.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_004",
+    "page": 6,
+    "bbox": [
+      225.77999877929688,
+      301.449951171875,
+      367.22998046875,
+      498.24993896484375
+    ],
+    "caption": "Figure 2. The schematic diagram of inset feeding",
+    "caption_preview": "Figure 2. The schematic diagram of inset feeding",
+    "image_path": "figures\\fig_004.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_005",
+    "page": 7,
+    "bbox": [
+      78.375,
+      149.0500030517578,
+      493.67498779296875,
+      267.25
+    ],
+    "caption": "Figure 3. Block diagram of S-parameter and S11 on the operating frequency",
+    "caption_preview": "Figure 3. Block diagram of S-parameter and S11 on the operating frequency",
+    "image_path": "figures\\fig_005.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_006",
+    "page": 7,
+    "bbox": [
+      94.0250015258789,
+      587.6499633789062,
+      503.56500244140625,
+      708.449951171875
+    ],
+    "caption": "Figure 4. VSWR of the proposed antenna on operating frequency",
+    "caption_preview": "Figure 4. VSWR of the proposed antenna on operating frequency",
+    "image_path": "figures\\fig_006.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_007",
+    "page": 8,
+    "bbox": [
+      126.55000305175781,
+      326.6499938964844,
+      466.6300048828125,
+      520.7999877929688
+    ],
+    "caption": "Figure 5. Real part, imaginary part, magnitude of Z11 on the operating frequency",
+    "caption_preview": "Figure 5. Real part, imaginary part, magnitude of Z11 on the operating frequency",
+    "image_path": "figures\\fig_007.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_008",
+    "page": 9,
+    "bbox": [
+      122.3499984741211,
+      117.24996948242188,
+      462.5,
+      307.14996337890625
+    ],
+    "caption": "Figure 6. Gain vs. Frequency",
+    "caption_preview": "Figure 6. Gain vs. Frequency",
+    "image_path": "figures\\fig_008.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_009",
+    "page": 9,
+    "bbox": [
+      153.75,
+      502.4499816894531,
+      442.8900146484375,
+      692.0999755859375
+    ],
+    "caption": "Figure 7. Beam-shaping: (a)Binormal distribution. (b) Edge distribution",
+    "caption_preview": "Figure 7. Beam-shaping: (a)Binormal distribution. (b) Edge distribution",
+    "image_path": "figures\\fig_009.png",
+    "warnings": []
+  },
+  {
+    "figure_id": "fig_010",
+    "page": 10,
+    "bbox": [
+      78.25,
+      323.04998779296875,
+      493.54998779296875,
+      454.9499816894531
+    ],
+    "caption": "Figure 8. (a)2D radiation pattern. (b)3D radiation pattern",
+    "caption_preview": "Figure 8. (a)2D radiation pattern. (b)3D radiation pattern",
+    "image_path": "figures\\fig_010.png",
+    "warnings": []
+  }
+]

@@ -1,0 +1,50 @@
+Journal of Physics: Conference Series
+ 
+ (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+commonly used in microstrip patch antenna: coaxial feed, microstrip line feed, and aperture-coupled 
+feed. Considering several benefits of microstrip patch antennas, such as adaptable surfaces, small in size, 
+compatibility with integrated circuit technology and simplicity of manufacture, there has been extensive 
+research on how to improve antenna performance. And from 1980 to 2010, microstrip patch antennas 
+were widely used in military and commercial applications [5-7]. After 2010, development within 
+wireless communication technology leads to changes from traditional antennas to microstrip patch 
+antenna for its compact size.
+Antenna research has taken a huge leap forward in the last five years. Microstrip patch antennas have 
+been used in wireless wearable products, military equipment, and cell phones. Microstrip patch antennas 
+have many advantages and outstanding results far surpass conventional antennas. Because they are 
+lightweight, foldable, simple to make, operate at numerous frequencies, and compact, microstrip patch 
+antennas have largely supplanted all conventional antennas in wireless applications [8].
+For this reason, microstrip patch antenna has been put into engineering applications in many fields, 
+including biomedicine, radar communication, 5G mobile communication, etc. An important area of 
+research in biomedical applications is the design of narrowband antennas for wearable devices. A 
+microstrip patch antenna based on the defective ground structure was proposed in 2019 that can be used 
+for narrowband applications. It has excellent performance, low cost, lightweight, and easy fabrication 
+hold promise for biomedical WLAN applications [9-11]. For another field, radar communication, a two-
+layer electromagnetic coupling with minimum return loss and microstrip line embedding rectangular 
+patch antenna is investigated for wireless devices. The antenna has a compact size, excellent return loss, 
+and radiation pattern performance, which enables patch antenna array configuration by creating cutouts 
+in the ground, making it usable for various communication devices, especially in the radar field [12]. 
+The sensing parameter estimation algorithm can be further developed to match the multibeam 
+framework well, based on the conventional digital Fourier transform and one-dimensional compressed 
+sensing techniques [13][14]. Mobile communication is in demand as mobile users multiply quickly. 
+Mobile users require more features, including faster data rates, effective communication, less traffic, 
+ease of use of different applications, etc. Service providers must meet mobile users’ demands, and 5G 
+technology can help. A high-frequency range with a wide bandwidth can be provided using 5G in the 
+millimeter wave band. More specifically, There is a great demand for uninterrupted high-stream online 
+education worldwide, especially in developing countries, and this application scenario has high data rate 
+and bandwidth requirements. A microstrip patch antenna operating in the 5G millimeter wave band can 
+meet user needs at the level of high-quality online education and other application scenarios [15-17].
+This paper proposes a microstrip patch antenna in 5G mobile communications. Implementing beam-
+shaping and beam-steering makes the antenna a directional antenna with a radiating angle of 120°. In 
+theoretical analysis, this paper first illustrates the geometry parameters of the antenna. It explains how 
+these parameters are calculated considering electromagnetic wave theory, which tries to prove that the 
+antenna’s performance (reflection coefficient, gain, radiation pattern) is good. Then introduce the way 
+of feeding – inset feed, which also includes how to make impedance matching meet the requirement 
+within the operating frequency band. This part tries to improve that only by making the antenna’s input 
+impedance match the transmission line’s reference impedance can the antenna radiates most power into 
+outer space instead of reflecting them. Nowadays, with the development of several technologies, 
+microstrip patch antenna applications are used widely, including medical applications, radar applications, 
+radar frequency identification, global positioning system applications, satellite and communication 
+applications, Bluetooth applications, and most importantly, 5G communication applications.
+2

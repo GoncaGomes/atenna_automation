@@ -1,0 +1,21 @@
+CONF-SPML-2023
+Journal of Physics: Conference Series
+2580 (2023) 012063
+IOP Publishing
+doi:10.1088/1742-6596/2580/1/012063
+Figure 6. Gain vs. Frequency
+As the antenna’s gain is highly related to its radiation pattern. Radiation patterns need to be carefully 
+designed to meet our requirements. Generally, there are two ways to change the radiation pattern, Beam-
+steering and Beam-shaping. Beam-steering can be achieved by several configurations of the array and 
+phase shifters. The phase shift can influence which direction the radiation pattern’s main lobe points. By 
+doing this, the main lobe’s direction and its gain can be influenced, side lobes’ gain and direction can 
+also be influenced. Beam-shaping can be obtained by using non-uniform amplitude distributions. It can 
+greatly change the shape of the radiation pattern. Figure 7 (a) shows the antenna’s radiation pattern using 
+binormal distribution when beam-shaping. It helps focus all the radiation power into two main lobes in 
+two different radiating directions and cancels all other lobes. Figure 7 (b) shows the antenna’s radiation 
+pattern using edge distribution when beam-shaping. Unlike binormal distribution, instead of focusing 
+on radiating power into a single lobe, it helps distribute all the power into different side lobes and makes 
+their power equal. In the proposed antenna, beam-shaping, an antenna array is combined, as shown in 
+Table 2.
+Figure 7. Beam-shaping: (a)Binormal distribution. (b) Edge distribution
+8
