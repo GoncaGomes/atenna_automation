@@ -14,6 +14,7 @@ dependencies = [
     "pandas>=2.3.2",
     "pdfplumber>=0.11.7",
     "pydantic>=2.11.9",
+    "chromadb>=0.5.23",
     "pymupdf>=1.26.4",
     "python-dotenv>=1.1.1",
     "rich>=14.1.0",
