@@ -219,22 +219,6 @@ def _build_vector_index(bundle_dir: str, manifest: Dict[str, Any]) -> Optional[D
     if not pages_dir.exists():
         return None
 
-    vector_dir = Path(bundle_dir) / VECTOR_SUBDIR
-    ensure_dir(vector_dir)
-
-    client = chromadb.PersistentClient(path=str(vector_dir))
-    collection_name = "page_chunks"
-    if collection_name in [c.name for c in client.list_collections()]:
-        client.delete_collection(collection_name)
-
-    embedding_function = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        model_name=EMBEDDING_MODEL,
-    )
-    collection = client.get_or_create_collection(
-        name=collection_name, embedding_function=embedding_function
-    )
-
     doc_ids: List[str] = []
     documents: List[str] = []
     metadatas: List[Dict[str, Any]] = []
@@ -251,8 +235,68 @@ def _build_vector_index(bundle_dir: str, manifest: Dict[str, Any]) -> Optional[D
                 }
             )
 
-    if documents:
-        collection.add(ids=doc_ids, metadatas=metadatas, documents=documents)
+    document_count = len(documents)
+
+    vector_dir = Path(bundle_dir) / VECTOR_SUBDIR
+    ensure_dir(vector_dir)
+
+    client = chromadb.PersistentClient(path=str(vector_dir))
+    collection_name = "page_chunks"
+    meta_path = vector_dir / "meta.json"
+
+    existing_meta: Optional[Dict[str, Any]] = None
+    if meta_path.exists():
+        try:
+            existing_meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing_meta = None
+
+    if existing_meta:
+        existing_name = existing_meta.get("collection_name", collection_name)
+        try:
+            collection = client.get_collection(existing_name)
+            collection_count = collection.count()
+        except Exception:  # pragma: no cover - corrupted cache path
+            collection = None
+            collection_count = -1
+
+        if (
+            collection is not None
+            and existing_meta.get("chunk_size") == CHUNK_SIZE
+            and existing_meta.get("chunk_overlap") == CHUNK_OVERLAP
+            and existing_meta.get("embedding_model") == EMBEDDING_MODEL
+            and existing_meta.get("document_count") == document_count
+            and collection_count >= document_count
+        ):
+            return existing_meta
+
+        if collection is not None:
+            try:
+                client.delete_collection(existing_name)
+            except Exception:
+                pass
+
+    if not documents:
+        meta = {
+            "persist_dir": str(vector_dir),
+            "collection_name": collection_name,
+            "chunk_size": CHUNK_SIZE,
+            "chunk_overlap": CHUNK_OVERLAP,
+            "embedding_model": EMBEDDING_MODEL,
+            "document_count": 0,
+        }
+        meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+        return meta
+
+    embedding_function = embedding_functions.OpenAIEmbeddingFunction(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        model_name=EMBEDDING_MODEL,
+    )
+    collection = client.get_or_create_collection(
+        name=collection_name, embedding_function=embedding_function
+    )
+
+    collection.add(ids=doc_ids, metadatas=metadatas, documents=documents)
 
     meta = {
         "persist_dir": str(vector_dir),
@@ -260,11 +304,9 @@ def _build_vector_index(bundle_dir: str, manifest: Dict[str, Any]) -> Optional[D
         "chunk_size": CHUNK_SIZE,
         "chunk_overlap": CHUNK_OVERLAP,
         "embedding_model": EMBEDDING_MODEL,
-        "document_count": len(documents),
+        "document_count": document_count,
     }
-    (vector_dir / "meta.json").write_text(
-        json.dumps(meta, indent=2), encoding="utf-8"
-    )
+    meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
     return meta
 
 
