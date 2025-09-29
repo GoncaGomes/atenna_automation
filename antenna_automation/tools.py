@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
+from .ingest import EMBEDDING_MODEL
 
 load_dotenv(override=True)
 
@@ -26,8 +28,10 @@ except ImportError:  # pragma: no cover - library optional in tests
 
 try:
     import chromadb
+    from chromadb.utils import embedding_functions
 except ImportError:  # pragma: no cover - optional dependency when tests skip RAG
     chromadb = None
+    embedding_functions = None
 
 
 def _read_lines(path: Path) -> List[str]:
@@ -41,7 +45,20 @@ def read_file(
     end_line: Optional[int] = None,
     max_chars: Optional[int] = None,
 ) -> str:
-    """Read part of a UTF-8 text file."""
+    """ Read a UTF‑8 file and return a targeted slice.
+    Args:
+    file_path: Absolute or repo‑relative path to a .txt or .json file.
+    start_line: 1‑based inclusive start line. Omit to read from the top.
+    end_line: 1‑based inclusive end line. Omit to read to the end.
+    max_chars: Optional hard cap on returned text length.
+
+    Returns:
+    The requested text slice (possibly truncated by max_chars).
+
+    Raises:
+    FileNotFoundError: When the file does not exist.
+    ValueError: When the extension is not .txt or .json.
+    """
 
     path = Path(file_path)
     if not path.exists():
@@ -72,7 +89,21 @@ def list_bundle_files(
     limit: int = 5,
     preview_chars: int = 160,
 ) -> List[Dict[str, Any]]:
-    """List files inside a bundle folder with a small preview to help navigation."""
+    """
+    List files in a bundle subdirectory with small previews.
+
+    Args:
+    bundle_dir: Ingest bundle root (contains pages/, figures/, vector_store/).
+    subdir: Subfolder to list; usually 'pages' or 'figures'.
+    limit: Maximum entries to return.
+    preview_chars: Preview size for text/json files.
+
+    Returns:
+    A list of {name, preview, size} objects.
+
+    Raises:
+    FileNotFoundError: When the subdir does not exist.
+    """
 
     base = Path(bundle_dir) / subdir
     if not base.exists():
@@ -99,7 +130,21 @@ def summarize_figure(
     instruction: str = "Summarize the antenna-relevant information in this figure.",
     max_chars: int = 400,
 ) -> Dict[str, Any]:
-    """Summarize a figure using an OpenAI vision-capable model."""
+    """
+    Use a vision model to summarize antenna‑relevant details from a figure.
+
+    Args:
+    fig_path: Path to a PNG/JPG produced by the ingest step.
+    instruction: Short directive for what to extract.
+    max_chars: Hard cap on the returned summary.
+
+    Returns:
+    {'summary': str, 'fig_path': str}
+
+    Notes: 
+    Sends 'input_text' + 'input_image' via the Responses API.
+    Use only when text evidence is insufficient or to confirm geometry.
+    """
 
     if OpenAI is None:
         raise RuntimeError("openai package is not available")
@@ -116,8 +161,8 @@ def summarize_figure(
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": instruction},
-                    {"type": "image_url", "image_url": {"url": data_url}},
+                    {"type": "input_text", "text": instruction},
+                    {"type": "input_image", "image_url": {"url": data_url}},
                 ],
             }
         ],
@@ -131,10 +176,27 @@ def summarize_figure(
 
 @function_tool
 def retrieve_passages(bundle_dir: str, query: str, top_k: int = 4) -> List[Dict[str, Any]]:
-    """Run similarity search over the cached vector store and return top passages."""
+    """
+    Query the persisted Chroma vector store for passages relevant to a query.
+    
+    Prerequisite:
+    Run ensure_ingested first to build the vector_store and meta.json.
+    
+    Args:
+    bundle_dir: Ingest bundle root (the folder containing vector_store/).
+    query: Natural‑language query string.
+    top_k: Number of passages to return.
+    
+    Returns:
+    A list of matches: {page_file, page_number, distance, snippet}.
+    
+    Raises:
+    FileNotFoundError: When the vector store metadata is missing.
+    RuntimeError: When chromadb/embedding utilities are unavailable or OPENAI_API_KEY is unset.
+    """
 
-    if chromadb is None:
-        raise RuntimeError("chromadb is not installed; cannot perform retrieval")
+    if chromadb is None or embedding_functions is None:
+        raise RuntimeError("chromadb (with embedding utilities) is not installed; cannot perform retrieval")
 
     store_path = Path(bundle_dir) / "vector_store"
     meta_path = store_path / "meta.json"
@@ -143,7 +205,19 @@ def retrieve_passages(bundle_dir: str, query: str, top_k: int = 4) -> List[Dict[
 
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
     client = chromadb.PersistentClient(path=str(store_path))
-    collection = client.get_collection(meta["collection_name"])
+
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY must be set to perform retrieval")
+
+    embedding_fn = embedding_functions.OpenAIEmbeddingFunction(
+        api_key=api_key,
+        model_name=EMBEDDING_MODEL,
+    )
+    collection = client.get_collection(
+        meta["collection_name"],
+        embedding_function=embedding_fn,
+    )
 
     results = collection.query(query_texts=[query], n_results=top_k)
     matches: List[Dict[str, Any]] = []
@@ -168,3 +242,6 @@ __all__ = [
     "summarize_figure",
     "retrieve_passages",
 ]
+
+
+

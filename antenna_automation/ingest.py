@@ -24,9 +24,9 @@ except ImportError:  # pragma: no cover - optional at runtime
 PARSER_VERSION = "ingest_v1.1"
 DEFAULT_STORE_DIR = "ingest_store"
 VECTOR_SUBDIR = "vector_store"
-CHUNK_SIZE = 800
-CHUNK_OVERLAP = 200
-EMBEDDING_MODEL = "text-embedding-3-large"
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 100
+EMBEDDING_MODEL = "text-embedding-3-small"
 
 _CAP_RE = re.compile(r"^\s*(fig(?:ure)?\.?\s*\d+[:\.\s])", re.IGNORECASE)
 _FREQ_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(kHz|MHz|GHz)", re.IGNORECASE)
