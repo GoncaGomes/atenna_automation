@@ -1,6 +1,3 @@
-CONF-SPML-2023
-Journal of Physics: Conference Series
-2580 (2023) 012063
 IOP Publishing
 doi:10.1088/1742-6596/2580/1/012063
 Figure 6. Gain vs. Frequency

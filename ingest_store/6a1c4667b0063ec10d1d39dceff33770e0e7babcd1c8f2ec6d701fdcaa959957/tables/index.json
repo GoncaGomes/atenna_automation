@@ -26,7 +26,8 @@
       ]
     ],
     "source": "pdfplumber",
-    "title": "Table 1"
+    "title": "Table 1",
+    "legend": "Dimensions of proposed antenna"
   },
   {
     "table_id": "table_002",
@@ -61,6 +62,7 @@
       ]
     ],
     "source": "pdfplumber",
-    "title": "Table 2"
+    "title": "Table 2",
+    "legend": "Spacial Parameter of Antenna array"
   }
 ]

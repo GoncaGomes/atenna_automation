@@ -3,7 +3,7 @@
   "parser_version": "ingest_v1.1",
   "status": "ready",
   "cache": "miss",
-  "created_at": "2025-10-17T11:52:16+00:00Z",
+  "created_at": "2025-10-17T14:07:07+00:00Z",
   "pdf_path": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\article\\test_article.pdf",
   "page_count": 11,
   "figure_count": 10,
@@ -34,7 +34,14 @@
     28700000000.0,
     27800000000.0
   ],
-  "vector_index": null,
+  "vector_index": {
+    "persist_dir": "ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\vector_store",
+    "collection_name": "page_chunks",
+    "chunk_size": 1000,
+    "chunk_overlap": 100,
+    "embedding_model": "text-embedding-3-small",
+    "document_count": 36
+  },
   "tables": [
     {
       "table_id": "table_001",
@@ -63,7 +70,8 @@
         ]
       ],
       "source": "pdfplumber",
-      "title": "Table 1"
+      "title": "Table 1",
+      "legend": "Dimensions of proposed antenna"
     },
     {
       "table_id": "table_002",
@@ -98,7 +106,8 @@
         ]
       ],
       "source": "pdfplumber",
-      "title": "Table 2"
+      "title": "Table 2",
+      "legend": "Spacial Parameter of Antenna array"
     }
   ],
   "document_metadata": {

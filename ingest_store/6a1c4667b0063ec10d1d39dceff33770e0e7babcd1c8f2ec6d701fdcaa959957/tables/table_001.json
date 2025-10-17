@@ -1,0 +1,51 @@
+{
+  "table_id": "table_001",
+  "page": 4,
+  "bbox": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rows": [
+    [
+      "Parameter",
+      "Value(mm)"
+    ],
+    [
+      "Lgnd",
+      "15"
+    ],
+    [
+      "Wlng",
+      "8"
+    ],
+    [
+      "Lpat",
+      "3.494"
+    ],
+    [
+      "Wpat",
+      "5.3"
+    ],
+    [
+      "Wmic",
+      "0.1"
+    ],
+    [
+      "Lslot",
+      "0.15"
+    ],
+    [
+      "h",
+      "0.032"
+    ],
+    [
+      "th",
+      "0.003"
+    ]
+  ],
+  "source": "pdfplumber",
+  "title": "Table 1",
+  "legend": "Dimensions of proposed antenna"
+}

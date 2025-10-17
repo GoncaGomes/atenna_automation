@@ -1,6 +1,3 @@
-CONF-SPML-2023
-Journal of Physics: Conference Series
-2580 (2023) 012063
 IOP Publishing
 doi:10.1088/1742-6596/2580/1/012063
 Table 2 Spacial Parameter of Antenna array
@@ -44,8 +41,3 @@ like IoT. Therefore, the microstrip patch antenna has a wide range of applicatio
 microstrip patch antennas are numerous and not just limited to 5G communications. Specific patch 
 radiators with a light weight and low profile are appropriate for use in treating malignancies in humans. 
 Microstrip patch antennas are produced in large quantities using photolithography.
-References 
-[1] 
-Hohn Colaco and Rajesh B. Lohani 2022 Performance analysis of microstrip patch antenna using
-a four-layered substrate of different materials
-9

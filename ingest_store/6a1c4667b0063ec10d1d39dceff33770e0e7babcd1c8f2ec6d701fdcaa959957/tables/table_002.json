@@ -28,5 +28,6 @@
     ]
   ],
   "source": "pdfplumber",
-  "title": "Table 2"
+  "title": "Table 2",
+  "legend": "Spacial Parameter of Antenna array"
 }

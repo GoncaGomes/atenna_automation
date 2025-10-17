@@ -40,6 +40,10 @@ HEADER_FOOTER_THRESHOLD_RATIO = 0.6
 
 _CAP_RE = re.compile(r"^\s*(fig(?:ure)?\.?\s*\d+[:\.\s])", re.IGNORECASE)
 _FREQ_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(kHz|MHz|GHz)", re.IGNORECASE)
+_TABLE_LABEL_RE = re.compile(
+    r"^\s*table\s+(\d+)\s*[:\.\-]?\s*(.*)$",
+    re.IGNORECASE,
+)
 _REFERENCES_RE = re.compile(r"^\s*references\b", re.IGNORECASE)
 _CANONICAL_SECTION_KEYWORDS = [
     "abstract",
@@ -95,6 +99,16 @@ class TableEntry:
     file_path: str
     source: str = "pdfplumber"
     title: Optional[str] = None
+    legend: Optional[str] = None
+
+
+def _parse_table_label(text: str) -> tuple[Optional[str], Optional[str]]:
+    stripped = text.strip()
+    match = _TABLE_LABEL_RE.match(stripped)
+    if not match:
+        return None, None
+    legend = match.group(2).strip(" .:-") if match.group(2) else None
+    return match.group(1), legend or None
 
 
 # ---------------------------------------------------------------------------
@@ -185,8 +199,9 @@ def _extract_tables_from_text_block(
     while idx < count:
         line = lines[idx]
         lower = line.lower()
+        table_number, legend_text = _parse_table_label(line)
 
-        if lower.startswith("table 1"):
+        if table_number == "1":
             header_idx = idx + 1
             if header_idx >= count:
                 idx += 1
@@ -221,7 +236,8 @@ def _extract_tables_from_text_block(
                     data=rows,
                     file_path=output_path,
                     source="pdfplumber",
-                    title="Table 1",
+                    title=f"Table {table_number}",
+                    legend=legend_text,
                 )
                 with open(output_path, "w", encoding="utf-8") as table_file:
                     json.dump(
@@ -232,6 +248,7 @@ def _extract_tables_from_text_block(
                             "rows": entry.data,
                             "source": entry.source,
                             "title": entry.title,
+                            "legend": entry.legend,
                         },
                         table_file,
                         ensure_ascii=False,
@@ -241,7 +258,7 @@ def _extract_tables_from_text_block(
             idx = header_idx + 1
             continue
 
-        if lower.startswith("table 2") and len(lower) > len("table 2"):
+        if table_number == "2" and len(lower) > len("table 2"):
             data_idx = idx + 1
             while data_idx < count and not lines[data_idx]:
                 data_idx += 1
@@ -288,7 +305,8 @@ def _extract_tables_from_text_block(
                     data=rows,
                     file_path=output_path,
                     source="pdfplumber",
-                    title="Table 2",
+                    title=f"Table {table_number}",
+                    legend=legend_text,
                 )
                 with open(output_path, "w", encoding="utf-8") as table_file:
                     json.dump(
@@ -299,6 +317,7 @@ def _extract_tables_from_text_block(
                             "rows": entry.data,
                             "source": entry.source,
                             "title": entry.title,
+                            "legend": entry.legend,
                         },
                         table_file,
                         ensure_ascii=False,
@@ -1596,6 +1615,7 @@ def _ensure_ingested_impl(pdf_path: str, store_dir: str = DEFAULT_STORE_DIR) -> 
                 "preview_rows": preview_rows,
                 "source": payload.get("source"),
                 "title": payload.get("title"),
+                "legend": payload.get("legend"),
             }
             index_entries.append(entry)
             tables_summary.append(entry)

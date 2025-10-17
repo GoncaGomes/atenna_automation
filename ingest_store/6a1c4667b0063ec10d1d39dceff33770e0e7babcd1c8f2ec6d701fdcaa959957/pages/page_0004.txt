@@ -1,7 +1,4 @@
-CONF-SPML-2023
-Journal of Physics: Conference Series
- 
- (2023) 012063
+(2023) 012063
 doi:10.1088/1742-6596/2580/1/012063
 2.  Theoretical Analysis of Microstrip Patch Antenna
 Figure 1. Proposed Microstrip Patch Antenna
