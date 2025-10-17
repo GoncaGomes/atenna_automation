@@ -1,12 +1,13 @@
 {
   "bundle_id": "6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957",
-  "parser_version": "ingest_v1.0",
+  "parser_version": "ingest_v1.1",
   "status": "ready",
   "cache": "miss",
-  "created_at": "2025-09-24T16:07:45+00:00Z",
+  "created_at": "2025-10-17T11:52:16+00:00Z",
   "pdf_path": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\article\\test_article.pdf",
   "page_count": 11,
   "figure_count": 10,
+  "table_count": 2,
   "pages_multi_column": [
     1,
     2,
@@ -33,12 +34,111 @@
     28700000000.0,
     27800000000.0
   ],
+  "vector_index": null,
+  "tables": [
+    {
+      "table_id": "table_001",
+      "page": 4,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "path": "tables\\table_001.json",
+      "n_rows": 9,
+      "n_cols": 2,
+      "preview_rows": [
+        [
+          "Parameter",
+          "Value(mm)"
+        ],
+        [
+          "Lgnd",
+          "15"
+        ],
+        [
+          "Wlng",
+          "8"
+        ]
+      ],
+      "source": "pdfplumber",
+      "title": "Table 1"
+    },
+    {
+      "table_id": "table_002",
+      "page": 10,
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "path": "tables\\table_002.json",
+      "n_rows": 3,
+      "n_cols": 4,
+      "preview_rows": [
+        [
+          "Parameter",
+          "X-axis",
+          "Y-axis",
+          "Z-axis"
+        ],
+        [
+          "Elements in x, y, z",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "Space shift in x, y, z",
+          "6",
+          "1",
+          "2"
+        ]
+      ],
+      "source": "pdfplumber",
+      "title": "Table 2"
+    }
+  ],
+  "document_metadata": {
+    "title": "A microstrip patch antenna for 5G mobile",
+    "sections": [
+      {
+        "title": "Abstract",
+        "page": 2
+      },
+      {
+        "title": "Introduction",
+        "page": 2
+      },
+      {
+        "title": "Theoretical Analysis of Microstrip Patch Antenna",
+        "page": 4
+      },
+      {
+        "title": "method",
+        "page": 5
+      },
+      {
+        "title": "Results and discussions",
+        "page": 6
+      },
+      {
+        "title": "Conclusion",
+        "page": 10
+      }
+    ],
+    "references_start_page": 10
+  },
   "paths": {
     "bundle_dir": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957",
     "pages_dir": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\pages",
     "figures_dir": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\figures",
+    "tables_dir": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\tables",
     "manifest_path": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\manifest.json",
-    "figures_index": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\figures\\index.json"
+    "figures_index": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\figures\\index.json",
+    "tables_index": "C:\\Users\\Lenovo\\SynologyDrive\\antenna_automation\\agentic_automation\\ingest_store\\6a1c4667b0063ec10d1d39dceff33770e0e7babcd1c8f2ec6d701fdcaa959957\\tables\\index.json"
   },
   "warnings": []
 }

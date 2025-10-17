@@ -1,0 +1,66 @@
+[
+  {
+    "table_id": "table_001",
+    "page": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "path": "tables\\table_001.json",
+    "n_rows": 9,
+    "n_cols": 2,
+    "preview_rows": [
+      [
+        "Parameter",
+        "Value(mm)"
+      ],
+      [
+        "Lgnd",
+        "15"
+      ],
+      [
+        "Wlng",
+        "8"
+      ]
+    ],
+    "source": "pdfplumber",
+    "title": "Table 1"
+  },
+  {
+    "table_id": "table_002",
+    "page": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "path": "tables\\table_002.json",
+    "n_rows": 3,
+    "n_cols": 4,
+    "preview_rows": [
+      [
+        "Parameter",
+        "X-axis",
+        "Y-axis",
+        "Z-axis"
+      ],
+      [
+        "Elements in x, y, z",
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "Space shift in x, y, z",
+        "6",
+        "1",
+        "2"
+      ]
+    ],
+    "source": "pdfplumber",
+    "title": "Table 2"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "table_id": "table_002",
+  "page": 10,
+  "bbox": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rows": [
+    [
+      "Parameter",
+      "X-axis",
+      "Y-axis",
+      "Z-axis"
+    ],
+    [
+      "Elements in x, y, z",
+      "2",
+      "2",
+      "2"
+    ],
+    [
+      "Space shift in x, y, z",
+      "6",
+      "1",
+      "2"
+    ]
+  ],
+  "source": "pdfplumber",
+  "title": "Table 2"
+}
